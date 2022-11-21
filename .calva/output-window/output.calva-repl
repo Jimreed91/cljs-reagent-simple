@@ -1,0 +1,437 @@
+; This is the Calva evaluation results output window.
+; TIPS: The keyboard shortcut `ctrl+alt+o o` shows and focuses this window
+;   when connected to a REPL session.
+; Please see https://calva.io/output/ for more info.
+; Happy coding! ♥️
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉shadow.user꞉>  ; Use `alt+enter` to evaluate
+; Creating cljs repl session...
+; Connecting cljs repl: shadow-cljs...
+;   The Calva Connection Log might have more connection progress information.
+
+(defn my-func (fn [message]
+                (js/alert (.toUpperCase (str message "!!!!!!!!!!!!!!!!")))))
+; Syntax error macroexpanding clojure.core/defn at (.calva/output-window/output.calva-repl:20:1).
+; fn - failed: vector? at: [:fn-tail :arity-n :bodies :params] spec: :clojure.core.specs.alpha/param-list
+; (fn [message] (js/alert (.toUpperCase (str message "!!!!!!!!!!!!!!!!")))) - failed: vector? at: [:fn-tail :arity-1 :params] spec: :clojure.core.specs.alpha/param-list
+clj꞉shadow.user꞉> 
+(fn [message]
+  (js/alert (.toUpperCase (str message "!!!!!!!!!!!!!!!!"))))
+; Syntax error compiling at (.calva/output-window/output.calva-repl:27:3).
+; No such namespace: js
+clj꞉shadow.user꞉> 
+; Syntax error compiling at (.calva/output-window/output.calva-repl:27:3).
+; No such namespace: js
+clj꞉shadow.user꞉> 
+
+; Syntax error compiling at (.calva/output-window/output.calva-repl:27:3).
+; No such namespace: js
+clj꞉shadow.user꞉> 
+
+; Connected session: cljs, repl: :app
+; TIPS: You can choose which REPL to use (clj or cljs):
+;    *Calva: Toggle REPL connection*
+;    (There is a button in the status bar for this)
+cljs꞉cljs.user꞉> 
+(fn [message]
+  (js/alert (.toUpperCase (str message "!!!!!!!!!!!!!!!!"))))
+#object[Function]
+cljs꞉cljs.user꞉> 
+(fn [message]
+  
+  
+  (js/alert (.toUpperCase (str message "!!!!!!!!!!!!!!!!"))))
+#object[Function]
+cljs꞉cljs.user꞉> 
+(defn my-func
+  (fn [message]
+    (js/alert (.toUpperCase (str message "!!!!!!!!!!!!!!!!"))))))
+nil
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:1:2
+;  Use of undeclared Var cljs.user/message
+; --------------------------------------------------------------------------------
+; 
+cljs꞉cljs.user꞉> 
+(defn funco [message]
+  
+  
+  (js/alert (.toUpperCase (str message "!!!!!!!!!!!!!!!!"))))
+#'cljs.user/funco
+cljs꞉cljs.user꞉> 
+(funco "chunky bacon")
+nil
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:1:1
+;  Use of undeclared Var cljs.user/bacon
+; --------------------------------------------------------------------------------
+; 
+cljs꞉cljs.user꞉> 
+(funco "chunky bacon")
+nil
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:1:1
+;  Use of undeclared Var cljs.user/bacon
+; --------------------------------------------------------------------------------
+; 
+cljs꞉cljs.user꞉> 
+(funco "chunky bacon")
+nil
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:1:1
+;  Use of undeclared Var cljs.user/bacon
+; --------------------------------------------------------------------------------
+; 
+cljs꞉cljs.user꞉> 
+(funco "chunky bacon")
+nil
+cljs꞉cljs.user꞉> 
+(funco "chunky bacon")
+nil
+cljs꞉cljs.user꞉> 
+(def name "Napoleon")
+
+(let [name "Pedro"]
+  (println "Vote 4" name))
+Vote 4 Pedro
+nil
+cljs꞉cljs.user꞉> 
+(let [name "Pedro"]
+  (println "Vote 4" name))
+Vote 4 Pedro
+nil
+cljs꞉cljs.user꞉> 
+nil
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:1:14
+;  Use of undeclared Var cljs.user/js->cljs
+; --------------------------------------------------------------------------------
+; 
+cljs꞉cljs.user꞉> 
+nil
+cljs꞉cljs.user꞉> 
+nil
+cljs꞉cljs.user꞉> 
+(def scores (js->cljs js/testScores))
+nil
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:1:14
+;  Use of undeclared Var cljs.user/js->cljs
+; --------------------------------------------------------------------------------
+; 
+cljs꞉cljs.user꞉> (def scores (js->cljs js/testScores))
+
+nil
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:1:14
+;  Use of undeclared Var cljs.user/js->cljs
+; --------------------------------------------------------------------------------
+; 
+cljs꞉cljs.user꞉> 
+(def scores (js->cljs js/testScores))
+nil
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:1:14
+;  Use of undeclared Var cljs.user/js->cljs
+; --------------------------------------------------------------------------------
+; 
+cljs꞉cljs.user꞉> 
+scores
+nil
+cljs꞉cljs.user꞉> 
+ljs.user=> (def cljs-scores (js->clj js/testScores))
+#'cljs.user/cljs-scores
+cljs꞉cljs.user꞉> 
+cljs-scores
+[{"id" 1, "score" 86, "gradeLetter" "B"} {"id" 2, "score" 93, "gradeLetter" "A"} {"id" 3, "score" 78, "gradeLetter" "C"}]
+cljs꞉cljs.user꞉> 
+#object[reagent.ratom.RAtom {:val [#object[reagent.ratom.RAtom {:val "bigboomboom"}]]}]
+cljs꞉cljs-app.components.form꞉> 
+#object[reagent.ratom.RAtom {:val []}]
+cljs꞉cljs-app.components.form꞉> 
+#object[reagent.ratom.RAtom {:val []}]
+cljs꞉cljs-app.components.form꞉> 
+#object[reagent.ratom.RAtom {:val [#object[reagent.ratom.RAtom {:val "jamesreed3050@gmail.com"}]]}]
+cljs꞉cljs-app.components.form꞉> 
+#object[reagent.ratom.RAtom {:val [#object[reagent.ratom.RAtom {:val "jamesreed3050@gmail.com"}]]}]
+cljs꞉cljs-app.components.form꞉> 
+[#object[reagent.ratom.RAtom {:val "jamesreed3050@gmail.com"}]]
+cljs꞉cljs-app.components.form꞉> 
+state/emails
+#object[reagent.ratom.RAtom {:val [#object[reagent.ratom.RAtom {:val "jamesreed3050@gmail.com"}]]}]
+cljs꞉cljs-app.components.form꞉> 
+@state/emails
+[#object[reagent.ratom.RAtom {:val "jamesreed3050@gmail.com"}]]
+cljs꞉cljs-app.components.form꞉> 
+(get @state/emails :val)
+nil
+cljs꞉cljs-app.components.form꞉> 
+nil
+cljs꞉cljs-app.components.form꞉> 
+(get @state/emails 0
+     )
+#object[reagent.ratom.RAtom {:val "jamesreed3050@gmail.com"}]
+cljs꞉cljs-app.components.form꞉> 
+(nth @state/emails 0
+     )
+#object[reagent.ratom.RAtom {:val "jamesreed3050@gmail.com"}]
+cljs꞉cljs-app.components.form꞉> 
+(nth @state/emails 1
+     )
+:repl/exception!
+; 
+; Execution error (Error) at (<cljs repl>:1).
+; No item 1 in vector of length 1
+cljs꞉cljs-app.components.form꞉> 
+(nth @state/emails 0
+     )
+#object[reagent.ratom.RAtom {:val "jamesreed3050@gmail.com"}]
+cljs꞉cljs-app.components.form꞉> 
+(swap! state/emails false)
+:repl/exception!
+; 
+; Execution error (TypeError) at (<cljs repl>:1).
+; f.call is not a function
+cljs꞉cljs-app.components.form꞉> 
+(swap! state/emails false)
+:repl/exception!
+; 
+; Execution error (TypeError) at (<cljs repl>:1).
+; f.call is not a function
+cljs꞉cljs-app.components.form꞉> 
+(swap! @state/emails false)
+[#object[reagent.ratom.RAtom {:val "jamesreed3050@gmail.com"}]]
+cljs꞉cljs-app.components.form꞉> 
+@state/emails
+[#object[reagent.ratom.RAtom {:val "jamesreed3050@gmail.com"}]]
+cljs꞉cljs-app.components.form꞉> 
+
+#object[reagent.ratom.RAtom {:val true}]
+cljs꞉cljs-app.components.form꞉> 
+(swap! @state/submitted false)
+true
+cljs꞉cljs-app.components.form꞉> 
+(reset! state/submitted false)
+#object[cljs$core$reset_BANG_]
+cljs꞉cljs-app.components.form꞉> 
+(reset! @state/submitted false)
+:repl/exception!
+; 
+; Execution error (Error) at (<cljs repl>:1).
+; No protocol method IReset.-reset! defined for type boolean: true
+cljs꞉cljs-app.components.form꞉> 
+(reset! @state/submitted false)
+:repl/exception!
+; 
+; Execution error (Error) at (<cljs repl>:1).
+; No protocol method IReset.-reset! defined for type boolean: true
+cljs꞉cljs-app.components.form꞉> 
+(reset! @state/submitted false)
+:repl/exception!
+; 
+; Execution error (Error) at (<cljs repl>:1).
+; No protocol method IReset.-reset! defined for type boolean: true
+cljs꞉cljs-app.components.form꞉> 
+(reset! state/submitted false)
+#object[reagent.ratom.RAtom {:val true}]
+cljs꞉cljs-app.components.form꞉> 
+state/submitted
+false
+cljs꞉cljs-app.components.form꞉> 
+false
+cljs꞉cljs-app.components.form꞉> 
+state/emails
+#object[reagent.ratom.RAtom {:val [#object[reagent.ratom.RAtom {:val "jamesreed3050@gmail.com"}] #object[reagent.ratom.RAtom {:val "jamesreed3050@gmail.com"}]]}]
+cljs꞉cljs-app.components.form꞉> 
+state/emails
+#object[reagent.ratom.RAtom {:val [#object[reagent.ratom.RAtom {:val "jamesreed3050@gmail.com"}] #object[reagent.ratom.RAtom {:val "jamesreed3050@gmail.com"}]]}]
+cljs꞉cljs-app.components.form꞉> 
+(state/emails)
+#object[reagent.ratom.RAtom {:val [#object[reagent.ratom.RAtom {:val "jamesreed3050@gmail.com"}] #object[reagent.ratom.RAtom {:val "jamesreed3050@gmail.com"}]]}]
+cljs꞉cljs-app.components.form꞉> 
+nil
+; [line 1, col 8] No reader function for tag object.
+; 
+cljs꞉cljs-app.components.form꞉> 
+#object[reagent.ratom.RAtom {:val [#object[reagent.ratom.RAtom {:val "jamesreed3050@gmail.com"}] #object[reagent.ratom.RAtom {:val "jamesreed3050@gmail.com"}]]}]
+nil
+; [line 1, col 8] No reader function for tag object.
+; 
+cljs꞉cljs-app.components.form꞉> 
+(@state/emails)
+:repl/exception!
+; 
+; Execution error (Error) at (<cljs repl>:1).
+; Invalid arity: 0
+cljs꞉cljs-app.components.form꞉> 
+:repl/exception!
+; 
+; Execution error (Error) at (<cljs repl>:1).
+; Invalid arity: 0
+cljs꞉cljs-app.components.form꞉> 
+:repl/exception!
+; 
+; Execution error (Error) at (<cljs repl>:1).
+; Invalid arity: 0
+cljs꞉cljs-app.components.form꞉> 
+@state/emails
+[#object[reagent.ratom.RAtom {:val "jamesreed3050@gmail.com"}] #object[reagent.ratom.RAtom {:val "jamesreed3050@gmail.com"}]]
+cljs꞉cljs-app.components.form꞉> 
+
+1
+cljs꞉cljs-app.components.form꞉> 
+#object[reagent.ratom.RAtom {:val [#object[reagent.ratom.RAtom {:val "jamesreed3050@gmail.com"}] #object[reagent.ratom.RAtom {:val "jamesreed3050@gmail.com"}]]}]
+cljs꞉cljs-app.components.form꞉> 
+(get [state/emails] 1)
+nil
+cljs꞉cljs-app.components.form꞉> 
+(get [state/emails] 1)
+nil
+cljs꞉cljs-app.components.form꞉> 
+:repl/exception!
+
+(nth state/emails 1)
+; 
+; Execution error (Error) at (<cljs repl>:1).
+; No item 1 in vector of length 1
+cljs꞉cljs-app.components.form꞉> 
+:repl/exception!
+cljs꞉cljs-app.components.form꞉> 
+:repl/exception!
+:repl/exception!
+; 
+; Execution error (Error) at (<cljs repl>:1).
+; nth not supported on this type reagent.ratom/RAtom
+cljs꞉cljs-app.components.form꞉> 
+:repl/exception!
+; 
+; Execution error (Error) at (<cljs repl>:1).
+; nth not supported on this type reagent.ratom/RAtom
+cljs꞉cljs-app.components.form꞉> 
+#object[reagent.ratom.RAtom {:val [#object[reagent.ratom.RAtom {:val "jamesreed3050@gmail.com"}] #object[reagent.ratom.RAtom {:val "jamesreed3050@gmail.com"}]]}]
+cljs꞉cljs-app.state꞉> 
+:repl/exception!
+; 
+; Execution error (TypeError) at (<cljs repl>:1).
+; cljs_app.state.email.call is not a function
+cljs꞉cljs-app.state꞉> 
+:repl/exception!
+; 
+; Execution error (Error) at (<cljs repl>:1).
+; nth not supported on this type reagent.ratom/RAtom
+cljs꞉cljs-app.state꞉> 
+nil
+; ------ WARNING - :undeclared-ns ------------------------------------------------
+;  Resource: <eval>:1:6
+;  No such namespace: state, could not locate state.cljs, state.cljc, or JavaScript source providing "state"
+; --------------------------------------------------------------------------------
+; 
+; 
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:1:6
+;  Use of undeclared Var state/emails
+; --------------------------------------------------------------------------------
+; 
+cljs꞉cljs-app.state꞉> 
+state/emails
+nil
+; ------ WARNING - :undeclared-ns ------------------------------------------------
+;  Resource: <eval>:1:1
+;  No such namespace: state, could not locate state.cljs, state.cljc, or JavaScript source providing "state"
+; --------------------------------------------------------------------------------
+; 
+; 
+; ------ WARNING - :undeclared-var -----------------------------------------------
+;  Resource: <eval>:1:1
+;  Use of undeclared Var state/emails
+; --------------------------------------------------------------------------------
+; 
+cljs꞉cljs-app.state꞉> 
+emails
+#object[reagent.ratom.RAtom {:val [#object[reagent.ratom.RAtom {:val "tonberry140@gmail.com"}]]}]
+cljs꞉cljs-app.state꞉> 
+(let emails [val])
+nil
+; ------ REPL Error while processing ---------------------------------------------
+; (let emails [val])
+; Syntax error macroexpanding cljs.core/let.
+; Call to cljs.core/let did not conform to spec.
+; -- Spec failed --------------------
+; 
+;   (emails ...)
+;    ^^^^^^
+; 
+; should satisfy
+; 
+;   vector?
+; 
+; -- Relevant specs -------
+; 
+; :shadow.cljs.devtools.cljs-specs/bindings:
+;   (clojure.spec.alpha/and
+;    clojure.core/vector?
+;    shadow.cljs.devtools.cljs-specs/even-number-of-forms?
+;    (clojure.spec.alpha/* :shadow.cljs.devtools.cljs-specs/binding))
+; 
+; -------------------------
+; Detected 1 error
+; 
+cljs꞉cljs-app.state꞉> 
+(for doc)
+nil
+; ------ REPL Error while processing ---------------------------------------------
+; (for doc)
+; null
+; Wrong number of args (1) passed to: cljs.core/for
+cljs꞉cljs-app.state꞉> 
+email
+#object[reagent.ratom.RAtom {:val "tonberry140@gmail.com"}]
+cljs꞉cljs-app.state꞉> 
+emails
+#object[reagent.ratom.RAtom {:val [#object[reagent.ratom.RAtom {:val "tonberry140@gmail.com"}]]}]
+cljs꞉cljs-app.state꞉> 
+nil
+; [line 1, col 8] No reader function for tag object.
+; 
+cljs꞉cljs-app.state꞉> 
+nth emails 0
+0
+cljs꞉cljs-app.state꞉> 
+(nth emails 0)
+0
+cljs꞉cljs-app.state꞉> 
+(get emails 0)
+nil
+cljs꞉cljs-app.state꞉> 
+(nth @emails 0)
+0
+cljs꞉cljs-app.state꞉> 
+(nth @ emails 1)
+:repl/exception!
+; 
+; Execution error (Error) at (<cljs repl>:1).
+; No item 1 in vector of length 1
+cljs꞉cljs-app.state꞉> 
+(nth @ emails 0)
+#object[reagent.ratom.RAtom {:val "tonberry140@gmail.com"}]
+cljs꞉cljs-app.state꞉> 
+#'cljs-app.core/home-page
+cljs꞉cljs-app.core꞉> 
+#object[reagent.ratom.RAtom {:val false}]
+cljs꞉cljs-app.core꞉> 
+#object[reagent.ratom.RAtom {:val false}]
+cljs꞉cljs-app.core꞉> 
+[#object[reagent.ratom.RAtom {:val false}]]
+cljs꞉cljs-app.core꞉> 
+false
+cljs꞉cljs-app.core꞉> 
+true
+cljs꞉cljs-app.core꞉> 
