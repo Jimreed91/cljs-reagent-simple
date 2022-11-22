@@ -11,7 +11,8 @@
    [:h3  {:class-name "text-5xl"} "😄" ]
    [:p (str "Your email \"" (last @state/emails) "\" has now been registered")]
    [:div {:class-name "space-y-6"}
-    [:button  {:on-click (fn [] (reset! state/submitted false))
+    [:button  {:on-click (fn [] (do (reset! state/submitted false)
+                                    (reset! state/email "")))
                :class-name "px-4 py-2 text-xl font-medium text-center 
                          text-white bg-orange-600 border border-transparent
                          rounded-full shadow-sm hover:bg-orange-700 focus:bg-orange-700
