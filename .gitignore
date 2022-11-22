@@ -23,3 +23,10 @@ pom.xml.asc
 .shadow-cljs/
 
 .nrepl-port
+/public/js
+/node_modules
+/target
+/.shadow-cljs
+/*.iml
+/.nrepl-port
+/.idea
