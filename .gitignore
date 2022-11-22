@@ -14,3 +14,12 @@ pom.xml.asc
 /.repl
 *.log
 /.env
+
+/target
+/node_modules
+/yarn.lock
+/package-lock.json
+/*.log
+.shadow-cljs/
+
+.nrepl-port
