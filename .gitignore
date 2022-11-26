@@ -21,6 +21,7 @@ pom.xml.asc
 /package-lock.json
 /*.log
 .shadow-cljs/
+<<<<<<< HEAD
 
 .nrepl-port
 /public/js
@@ -30,3 +31,5 @@ pom.xml.asc
 /*.iml
 /.nrepl-port
 /.idea
+=======
+>>>>>>> bc235ec10e0b2a418559d88660b3770abb3a9873
