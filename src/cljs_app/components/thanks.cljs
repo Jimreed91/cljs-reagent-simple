@@ -21,5 +21,5 @@
     [:h2 {:class-name "text-2xl"}
      "Registered so far:"]
     (for [e @state/emails]
-      [:p e])
+      [:p {:key e} e])
     ]])
