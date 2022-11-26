@@ -24,7 +24,7 @@ pom.xml.asc
 
 .nrepl-port
 /public/js
-/node_modules
+./node_modules
 /target
 /.shadow-cljs
 /*.iml
